@@ -1,0 +1,66 @@
+@import "scss/fontawesome.scss";
+@import "scss/brands.scss";
+@import "scss/solid.scss";
+
+.social-media {
+    grid-area: buttons;
+    cursor: pointer;
+    
+    a {
+        font-size: 15px;
+        color: $sociallinkColor;
+        padding-left: 5px;
+        display: none;
+    }
+
+    &__blog {
+        background-color: #e17b77;
+        @include socialbuttons();
+       
+    }
+
+    &__twitter {
+        background-color: #00aced;
+        @include socialbuttons();
+    }
+
+    &__linkedin {
+        background-color: #007bb6;
+        @include socialbuttons();
+    }
+
+    &__facebook {
+        background-color: #3b5998;
+        @include socialbuttons();
+    }
+
+    &__github {
+        background-color: #333;
+        @include socialbuttons();
+    }
+ 
+    .fa-laptop-code::before {
+        content: "\f5fc";
+        color: $iconColor;
+    }
+
+    .fa-twitter::before {
+        content: "\f099";
+        color: $iconColor;
+    }
+
+    .fa-linkedin-in::before {
+        content: "\f0e1";
+        color: $iconColor;
+    }
+
+    .fa-facebook-f::before {
+        content: "\f39e";
+        color: $iconColor;
+    }
+
+    .fa-github::before {
+        content: "\f09b";
+        color: $iconColor;
+    }
+}

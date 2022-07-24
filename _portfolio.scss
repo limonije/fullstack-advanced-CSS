@@ -1,0 +1,144 @@
+.portfolio {
+    margin: 50px auto;
+    width: 330px;
+    grid-area: portfolio;
+    
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 300px);
+        grid-gap: 15px;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8"
+        "item9";
+    }
+
+    &__images img {
+        border-radius: 10%;
+        width: 300px; 
+        height: 300px; 
+    }
+
+    button{
+        position: absolute;
+        opacity: 0;
+        padding: 16px;
+        font-family: inherit;
+        background-color: $buttonColor;
+        border-radius: 16px;
+        bottom: 125px;
+        left: 100px;
+        width: 100px;
+    }
+
+    button a {
+        color: $linkColor;
+        text-decoration: none;
+    }
+
+    .container1 {
+        @include container();
+        grid-area: item1;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+   
+    .container2 {
+        @include container();
+        grid-area: item2;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+           }
+
+    .container3 {
+        @include container();
+        grid-area: item3;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+
+    .container4 {
+        @include container();
+        grid-area: item4;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+
+    .container5 {
+        @include container();
+        grid-area: item5;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+    
+    .container6 {
+        @include container();
+        grid-area: item6;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+
+    .container7 {
+        @include container();
+        grid-area: item7;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+
+    .container8 {
+        @include container();
+        grid-area: item8;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+    
+    .container9 {
+        @include container();
+        grid-area: item9;
+        &:hover img {
+            @include hoverimage();
+        }
+        &:hover button {    
+            @include hoverbutton();
+        }
+    }
+}

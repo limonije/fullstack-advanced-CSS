@@ -1,0 +1,93 @@
+@import "./variables";
+@import "./mixins";
+@import "./testimonial";
+@import "./portfolio";
+@import "./socialbuttons";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: $pagebackgroundColor;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 750px 2950px 1fr;
+    grid-template-areas:
+    "header"
+    "testimonial"
+    "portfolio"
+    "buttons"
+}
+
+header {
+    color:$textColor;
+    text-align: center;
+    grid-area: header;
+}
+
+@media (min-width: 768px) {
+    .parent {
+        grid-template-rows: 1fr 750px 1690px 1fr;
+    }
+
+    .testimonial {
+        &__wrapper img {
+            margin: 35px auto 15px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 50px;
+        }
+          
+        &__footer h2 {
+            font-size: 27px;
+            margin-top: 110px;
+        }
+            
+        &__link {
+            font-size: 27px;
+    }
+}
+        
+    .portfolio {
+        width: 685px;
+                
+        &__images {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px 300px 300px 300px 300px;
+            grid-template-areas: 
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "item7 item8"
+            "item9 item9";
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+   .parent {
+        grid-template-rows: 1fr 750px 1060px 1fr;
+    }
+
+    .portfolio {
+        margin: 50px auto;
+        width: 1035px;
+        grid-area: portfolio;
+        
+        &__images {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 300px 300px 300px;
+            grid-template-areas: 
+            "item1 item2 item3"
+            "item4 item5 item6"
+            "item7 item8 item9";
+        }
+    }
+}

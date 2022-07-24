@@ -1,0 +1,60 @@
+.testimonial {
+    position: center;
+    max-width: 570px;
+    height: 750px;
+    background-color: $textbackgroundColor;
+    margin: 15px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 30px;
+    grid-area: testimonial;
+    
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 500px;
+        grid-template-areas: 
+        "text"
+        "footer";
+    }
+
+    &__wrapper img {
+        border-radius: 50%;
+        width: 170px;
+        display: block;
+        margin: 10px auto 15px;
+        border: 7px solid white;
+        position: relative;
+       
+    }
+    &__text {
+        color:$textColor;
+        font-size: 15px;
+        line-height: 32px;
+        text-align: left;
+        margin: 45px;
+        margin-bottom: 10px;
+        grid-area: text;
+        
+    }
+   &__footer {
+        text-align:center;
+        background-color: $footerColor;
+        grid-area: footer;
+        
+    }
+   &__footer h2 {
+       color: $footertextColor;
+       font-size: 25px;
+       letter-spacing: 2px;
+       margin-top: 120px;
+   }
+    &__link {
+        font-family: inherit;
+        font-size: 25px;
+        color: $linkColor;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
