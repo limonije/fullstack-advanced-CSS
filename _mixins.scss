@@ -21,11 +21,9 @@
     height: 20px;
     padding: 15px;
     width: 25px;
-    transform: translateX(100vw-5vw);
-              
+                 
     &:hover {
-        transform: translateX(100vw-20vw);
-        width: 250px;
+        width: 200px;
 
     }
     &:hover a {

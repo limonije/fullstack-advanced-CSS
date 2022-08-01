@@ -5,7 +5,12 @@
 .social-media {
     grid-area: buttons;
     cursor: pointer;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    align-content: center;
+       
     a {
         font-size: 15px;
         color: $sociallinkColor;
